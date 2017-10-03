@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Kotlin-Sample</string>
+    <string name="iv_person_description">Person image</string>
+    <string name="item_person_name">%1$s %2$s %3$s</string>
 </resources>
