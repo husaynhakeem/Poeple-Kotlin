@@ -20,7 +20,7 @@ class PersonViewHolder : RecyclerView.ViewHolder {
     }
 
     fun bind(person: Person) {
-        Picasso.with(context).load(person.image).into(binding.ivPerson)
+        Picasso.with(context).load(person.picture.thumbnail).into(binding.ivPerson)
         binding.person = person;
         binding.executePendingBindings();
     }
