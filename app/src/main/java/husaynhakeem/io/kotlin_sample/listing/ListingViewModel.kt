@@ -3,8 +3,8 @@ package husaynhakeem.io.kotlin_sample.listing
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableField
-import husaynhakeem.io.kotlin_sample.data.PeopleResult
-import husaynhakeem.io.kotlin_sample.data.Person
+import husaynhakeem.io.kotlin_sample.model.PeopleResult
+import husaynhakeem.io.kotlin_sample.model.Person
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

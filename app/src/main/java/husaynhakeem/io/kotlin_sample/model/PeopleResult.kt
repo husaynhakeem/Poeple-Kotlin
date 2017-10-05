@@ -1,4 +1,4 @@
-package husaynhakeem.io.kotlin_sample.data
+package husaynhakeem.io.kotlin_sample.model
 
 import java.io.Serializable
 

@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import husaynhakeem.io.kotlin_sample.R
-import husaynhakeem.io.kotlin_sample.data.Person
+import husaynhakeem.io.kotlin_sample.model.Person
 import husaynhakeem.io.kotlin_sample.databinding.ActivityMainBinding
 
 class ListingActivity : AppCompatActivity() {

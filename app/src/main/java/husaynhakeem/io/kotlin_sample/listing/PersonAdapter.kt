@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import husaynhakeem.io.kotlin_sample.R
-import husaynhakeem.io.kotlin_sample.data.Person
+import husaynhakeem.io.kotlin_sample.model.Person
 import husaynhakeem.io.kotlin_sample.databinding.ItemPersonBinding
 /**
  * Created by husaynhakeem on 10/3/17.

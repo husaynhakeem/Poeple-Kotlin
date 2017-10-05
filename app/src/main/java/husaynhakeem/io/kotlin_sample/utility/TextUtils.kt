@@ -1,4 +1,4 @@
-package husaynhakeem.io.kotlin_sample.utilities
+package husaynhakeem.io.kotlin_sample.utility
 
 /**
  * Created by husaynhakeem on 10/5/17.

@@ -7,9 +7,9 @@ import android.databinding.BindingAdapter
 import android.view.View
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
-import husaynhakeem.io.kotlin_sample.data.Person
+import husaynhakeem.io.kotlin_sample.model.Person
 import husaynhakeem.io.kotlin_sample.detail.PersonDetailActivity
-import husaynhakeem.io.kotlin_sample.utilities.TextUtils.Companion.formattedFullName
+import husaynhakeem.io.kotlin_sample.utility.TextUtils.Companion.formattedFullName
 
 /**
  * Created by husaynhakeem on 10/5/17.
