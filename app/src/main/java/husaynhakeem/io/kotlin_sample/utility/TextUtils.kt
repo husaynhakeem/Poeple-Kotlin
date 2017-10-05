@@ -19,5 +19,12 @@ class TextUtils {
             }
             return formattedFullName.toString()
         }
+
+        fun formattedBirthday(dob: String) : String {
+            return ""
+        }
+
+        var LOCATION_SEPARATOR = ", "
+        fun formattedLocation(city: String, state: String) = city + LOCATION_SEPARATOR + state
     }
 }

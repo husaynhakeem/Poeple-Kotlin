@@ -3,4 +3,12 @@
     <string name="item_person_name">%1$s %2$s %3$s</string>
     <string name="retry">Retry</string>
     <string name="error_loading_people">An error occurred</string>
+    <string name="iv_detail_description">Person detail image</string>
+    <string name="iv_username_description">Usename icon</string>
+    <string name="iv_gender_description">Gender icon</string>
+    <string name="iv_birthday_description">Birthday icon</string>
+    <string name="iv_location_description">Location icon</string>
+    <string name="iv_email_description">Email icon</string>
+    <string name="iv_phone_description">Phone icon</string>
+    <string name="iv_cell_description">Cell icon</string>
 </resources>
