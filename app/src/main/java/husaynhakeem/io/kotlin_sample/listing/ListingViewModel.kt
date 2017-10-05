@@ -3,8 +3,10 @@ package husaynhakeem.io.kotlin_sample.listing
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableField
+import android.util.Log
 import husaynhakeem.io.kotlin_sample.model.PeopleResult
 import husaynhakeem.io.kotlin_sample.model.Person
+import husaynhakeem.io.kotlin_sample.utility.TextUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -31,6 +33,7 @@ class ListingViewModel : ViewModel() {
     private fun onPersonListReceived(peopleResult: PeopleResult) {
         isLoading.set(false)
         this.people.value = peopleResult.results
+        printPeople(peopleResult.results)
     }
 
     private fun onPersonListReceptionError(throwable: Throwable) {
@@ -41,5 +44,9 @@ class ListingViewModel : ViewModel() {
     override public fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
+    }
+
+    private fun printPeople(people: List<Person>) {
+        people.forEach { person -> Log.d("Person", TextUtils.formattedFullName(arrayOf(person.name.first, person.name.last))) }
     }
 }

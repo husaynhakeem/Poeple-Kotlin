@@ -27,6 +27,8 @@ class ListingAdapter(var people: List<Person>) : RecyclerView.Adapter<PersonView
 
     override fun getItemCount(): Int = people.size
 
+    override fun getItemViewType(position: Int) = position
+
     fun replaceData(people: List<Person>) {
         this.people = people
     }

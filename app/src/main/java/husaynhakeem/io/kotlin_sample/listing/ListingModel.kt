@@ -7,5 +7,6 @@ import husaynhakeem.io.kotlin_sample.network.PeopleService
  */
 class ListingModel {
 
-    fun getPeople() = PeopleService().personApi.getPersonList("")
+    var EMPTY_URL = ""
+    fun getPeople() = PeopleService().personApi.getPersonList(EMPTY_URL)
 }
