@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class PersonService {
 
-    var BASE_URL = "http://api.randomuser.me/?results=10&nat=en"
+    var BASE_URL = "http://api.randomuser.me/?results=20&nat=en"
     val personApi: PersonApi
 
     init {
