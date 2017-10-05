@@ -42,7 +42,6 @@ class ListingActivity : AppCompatActivity() {
     }
 
     fun onLoadingDataError() {
-        bar.dismiss()
         bar = Snackbar.make(rootView(), getString(R.string.error_loading_people), Snackbar.LENGTH_INDEFINITE);
         bar.setAction(getString(R.string.retry), { view -> viewModel.start() })
         bar.show();

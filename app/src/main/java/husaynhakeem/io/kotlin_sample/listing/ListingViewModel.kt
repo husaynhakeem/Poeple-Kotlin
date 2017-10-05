@@ -8,7 +8,6 @@ import husaynhakeem.io.kotlin_sample.data.Person
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import timber.log.Timber
 
 /**
  * Created by husaynhakeem on 10/3/17.
@@ -36,7 +35,7 @@ class ListingViewModel : ViewModel() {
 
     private fun onPersonListReceptionError(throwable: Throwable) {
         isLoading.set(false)
-        Timber.e("Error while fetching the data (people). Cause -> %s", throwable.message)
+        this.people.value = null
     }
 
     override public fun onCleared() {
