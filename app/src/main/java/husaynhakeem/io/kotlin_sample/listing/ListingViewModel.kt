@@ -39,7 +39,8 @@ class ListingViewModel : ViewModel() {
         Timber.e("Error while fetching the data (people). Cause -> %s", throwable.message)
     }
 
-    fun clear() {
+    override public fun onCleared() {
+        super.onCleared()
         compositeDisposable.clear()
     }
 }
