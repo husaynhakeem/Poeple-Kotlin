@@ -7,7 +7,7 @@
 
         <variable
             name="itemPersonViewModel"
-            type="husaynhakeem.io.kotlin_sample.listing.ItemPersonViewModel" />
+            type="husaynhakeem.io.kotlin_sample.listing.item.PersonViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
