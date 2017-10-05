@@ -27,7 +27,7 @@ class ListingActivity : AppCompatActivity() {
 
         binding.rvPeople.layoutManager = LinearLayoutManager(this)
         binding.rvPeople.setHasFixedSize(true)
-        val personAdapter = PersonAdapter(ArrayList<Person>())
+        val personAdapter = ListingAdapter(ArrayList<Person>())
         binding.rvPeople.adapter = personAdapter
 
         viewModel.people.observe(this, Observer<List<Person>> {

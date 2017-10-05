@@ -5,15 +5,17 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import husaynhakeem.io.kotlin_sample.R
-import husaynhakeem.io.kotlin_sample.model.Person
 import husaynhakeem.io.kotlin_sample.databinding.ItemPersonBinding
+import husaynhakeem.io.kotlin_sample.listing.item.PersonViewHolder
+import husaynhakeem.io.kotlin_sample.model.Person
+
 /**
  * Created by husaynhakeem on 10/3/17.
  */
 
-class PersonAdapter(var people: List<Person>) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
+class ListingAdapter(var people: List<Person>) : RecyclerView.Adapter<PersonViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) : PersonViewHolder{
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) : PersonViewHolder {
         val layoutInflater = LayoutInflater.from(parent?.context)
         val itemPersonBinding = DataBindingUtil.inflate<ItemPersonBinding>(layoutInflater, R.layout.item_person, parent, false)
         return PersonViewHolder(itemPersonBinding)
@@ -28,14 +30,4 @@ class PersonAdapter(var people: List<Person>) : RecyclerView.Adapter<PersonAdapt
     fun replaceData(people: List<Person>) {
         this.people = people
     }
-
-    class PersonViewHolder(val binding: ItemPersonBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(person: Person) {
-            if (binding.itemPersonViewModel == null)
-                binding.itemPersonViewModel = ItemPersonViewModel(itemView.context, person)
-            else
-                binding.itemPersonViewModel.person = person
-        }
-    }
 }
-

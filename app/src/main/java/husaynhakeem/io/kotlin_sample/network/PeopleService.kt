@@ -7,10 +7,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 /**
  * Created by husaynhakeem on 10/3/17.
  */
-class PersonService {
+class PeopleService {
 
     var BASE_URL = "http://api.randomuser.me/?results=20&nat=en"
-    val personApi: PersonApi
+    val personApi: PeopleApi
 
     init {
         val retrofit: Retrofit = Retrofit.Builder()
@@ -18,6 +18,6 @@ class PersonService {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
-        personApi = retrofit.create(PersonApi::class.java)
+        personApi = retrofit.create(PeopleApi::class.java)
     }
 }

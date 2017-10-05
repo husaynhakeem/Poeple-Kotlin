@@ -8,7 +8,7 @@ import retrofit2.http.Url
 /**
  * Created by husaynhakeem on 10/3/17.
  */
-interface PersonApi {
+interface PeopleApi {
 
     @GET
     fun getPersonList(@Url url: String): Observable<PeopleResult>

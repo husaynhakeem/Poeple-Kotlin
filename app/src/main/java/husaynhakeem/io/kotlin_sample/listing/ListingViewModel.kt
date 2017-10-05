@@ -14,7 +14,7 @@ import io.reactivex.schedulers.Schedulers
  */
 class ListingViewModel : ViewModel() {
 
-    var personModel: PersonModel = PersonModel()
+    var personModel: ListingModel = ListingModel()
     var people = MutableLiveData<List<Person>>()
     val isLoading = ObservableField<Boolean>()
     val compositeDisposable = CompositeDisposable()
