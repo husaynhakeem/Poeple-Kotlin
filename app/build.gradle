@@ -26,13 +26,13 @@ android {
         production {
             dimension "default"
             applicationId "husaynhakeem.io.kotlin_sample.prod"
-            resValue "string", "app_name", "Kotlin Sample prod"
+            resValue "string", "app_name", "People - Kotlin Sample"
         }
 
         development {
             dimension "default"
             applicationId "husaynhakeem.io.kotlin_sample.dev"
-            resValue "string", "app_name", "Kotlin Sample dev"
+            resValue "string", "app_name", "People - Kotlin Sample dev"
         }
     }
 
