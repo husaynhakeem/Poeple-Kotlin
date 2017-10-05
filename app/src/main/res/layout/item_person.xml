@@ -6,13 +6,14 @@
     <data>
 
         <variable
-            name="person"
-            type="husaynhakeem.io.kotlin_sample.data.Person" />
+            name="itemPersonViewModel"
+            type="husaynhakeem.io.kotlin_sample.listing.ItemPersonViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{itemPersonViewModel::onClick}"
         android:padding="16dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -20,12 +21,12 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:contentDescription="@string/iv_person_description"
-            android:src="@mipmap/ic_launcher"
             app:civ_border_color="@android:color/black"
             app:civ_border_width="1dp"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:imageUrl="@{itemPersonViewModel.picture}" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -33,15 +34,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:text="@{person.name.title + ` ` + person.name.first + ` ` + person.name.last}"
+            android:text="@{itemPersonViewModel.fullName}"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@+id/iv_person"
-            tools:text="Husayn Abdul Hakeem" />
+            tools:text="Mr Husayn Abdul Hakeem" />
 
         <TextView
             android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{person.email}"
+            android:text="@{itemPersonViewModel.email}"
+            android:textColor="@android:color/secondary_text_light"
             app:layout_constraintLeft_toLeftOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_name"
             tools:text="husaynhakeem@gmail.com" />
@@ -50,7 +54,8 @@
             android:id="@+id/tv_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{person.phone}"
+            android:text="@{itemPersonViewModel.phone}"
+            android:textColor="@android:color/secondary_text_light"
             app:layout_constraintLeft_toLeftOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_email"
             tools:text="+212 6 27 29 11 93" />
