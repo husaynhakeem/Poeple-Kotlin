@@ -9,13 +9,11 @@ import husaynhakeem.io.kotlin_sample.databinding.ItemPersonBinding
 /**
  * Created by husaynhakeem on 10/3/17.
  */
-class PersonViewHolder : RecyclerView.ViewHolder {
+class PersonViewHolder(var binding: ItemPersonBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    lateinit var binding: ItemPersonBinding
-    lateinit var context: Context
+    var context: Context
 
-    constructor(binding: ItemPersonBinding) : super(binding.root) {
-        this.binding = binding
+    init {
         this.context = binding.root.context
     }
 
