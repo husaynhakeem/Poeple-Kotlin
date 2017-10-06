@@ -13,16 +13,13 @@ import husaynhakeem.io.kotlin_sample.model.Person
  */
 class DetailActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityDetailBinding
-    lateinit var detailViewModel: DetailViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
+        val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
 
-        val factory = DetailViewModelFactory(intent.getSerializableExtra("person") as Person)
-        detailViewModel = ViewModelProviders.of(this, factory).get(DetailViewModel::class.java)
-        binding.detailViewModel = detailViewModel
+        val person = intent.getSerializableExtra("person") as Person
+        val factory = DetailViewModelFactory(person)
+        binding.detailViewModel = ViewModelProviders.of(this, factory).get(DetailViewModel::class.java)
     }
 }

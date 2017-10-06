@@ -17,10 +17,11 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.CollapsedTitle"
             app:contentScrim="@color/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
-            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:expandedTitleTextAppearance="@style/TextAppearance.ExpandedTitle"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:title="@{detailViewModel.fullName}">
 

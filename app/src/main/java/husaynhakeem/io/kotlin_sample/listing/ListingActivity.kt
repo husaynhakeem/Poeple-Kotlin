@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import husaynhakeem.io.kotlin_sample.R
-import husaynhakeem.io.kotlin_sample.model.Person
 import husaynhakeem.io.kotlin_sample.databinding.ActivityMainBinding
+import husaynhakeem.io.kotlin_sample.model.Person
 
 class ListingActivity : AppCompatActivity() {
 
@@ -48,9 +48,4 @@ class ListingActivity : AppCompatActivity() {
     }
 
     private fun rootView(): View = findViewById(android.R.id.content)
-
-    override fun onDestroy() {
-        super.onDestroy()
-        viewModel.onCleared()
-    }
 }
