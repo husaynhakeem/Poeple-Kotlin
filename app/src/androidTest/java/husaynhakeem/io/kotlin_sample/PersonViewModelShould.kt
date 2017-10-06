@@ -24,7 +24,7 @@ class PersonViewModelShould {
     @Test
     fun returnCorrectFullName() {
         val fullName = personViewModel.getFullName()
-        assertEquals("Some_title Husayn Hakeem ", fullName)
+        assertEquals("Some_title Husayn Hakeem", fullName)
     }
 
     @Test

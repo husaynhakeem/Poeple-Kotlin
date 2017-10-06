@@ -11,7 +11,7 @@ class FakeData {
 
         var ANY_GENDER = "some_gender"
         var ANY_EMAIL = "some_email"
-        var ANY_BIRTHDAY = "some_birthday"
+        var ANY_BIRTHDAY = "1993-11-20 15:32:21"
         var ANY_REGISTRATION = "some_registration"
         var ANY_PHONE = "some_phone"
         var ANY_CELL = "some_cell"

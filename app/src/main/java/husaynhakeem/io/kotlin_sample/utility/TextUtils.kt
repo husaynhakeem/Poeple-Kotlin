@@ -20,7 +20,7 @@ class TextUtils {
                     formattedFullName.append(SPACE)
                 }
             }
-            return formattedFullName.toString()
+            return formattedFullName.toString().trim()
         }
 
         var SEPARATOR = ", "
