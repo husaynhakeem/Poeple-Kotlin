@@ -3,6 +3,7 @@ package husaynhakeem.io.kotlin_sample.listing
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableField
+import android.util.Log
 import husaynhakeem.io.kotlin_sample.model.PeopleResult
 import husaynhakeem.io.kotlin_sample.model.Person
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -36,6 +37,7 @@ class ListingViewModel : ViewModel() {
     private fun onPersonListReceptionError(throwable: Throwable) {
         isLoading.set(false)
         this.people.value = null
+        Log.e(ListingViewModel::class.java.simpleName, "Error while loading people data: " + throwable.message)
     }
 
     override public fun onCleared() {

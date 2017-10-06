@@ -23,7 +23,6 @@ class ListingActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(ListingViewModel::class.java)
         binding.viewModel = viewModel
-        binding.executePendingBindings()
 
         binding.rvPeople.layoutManager = LinearLayoutManager(this)
         binding.rvPeople.setHasFixedSize(true)
