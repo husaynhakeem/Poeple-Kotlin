@@ -2,7 +2,7 @@
 ![alt text](https://github.com/Husaynhakeem/Poeple-Kotlin/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
 Sample Contacts-like Android application used to learn Kotlin.
-The application displays a list of people from a (public API)[http://api.randomuser.me/?results=20&nat=en], then allows to access details on each person.
+The application displays a list of people from a [public API](http://api.randomuser.me/?results=20&nat=en), then allows to access details on each person.
 
 
 ## Libraries used in this project
