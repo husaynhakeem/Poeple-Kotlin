@@ -19,6 +19,9 @@ The application displays a list of people from a [public API](http://api.randomu
 - [Android Joda time](https://github.com/dlew/joda-time-android)
 - [Testing Support Library](https://developer.android.com/topic/libraries/testing-support-library/index.html)
 
+## Demo
+![alt text](https://github.com/Husaynhakeem/Poeple-Kotlin/blob/master/app/app_demo.png)
+
 
 ## Want to contribute ?
 Feel free to report or add any useful feature, I will be glad to improve it -with your help-.
