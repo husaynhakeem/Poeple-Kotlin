@@ -1,6 +1,7 @@
 package husaynhakeem.io.kotlin_sample.model
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
 /**
  * Created by husaynhakeem on 10/3/17.
@@ -8,6 +9,7 @@ import java.io.Serializable
 class PeopleResult(val results: List<Person>,
                    val info: Metadata)
 
+@Parcelize
 class Person(val gender: String,
              val name: Name,
              val location: Location,
@@ -17,23 +19,29 @@ class Person(val gender: String,
              val phone: String,
              val cell: String,
              val id: Id,
-             val picture: Picture) : Serializable
+             val picture: Picture) : Parcelable
 
+@Parcelize
 class Name(val title: String,
            val first: String,
-           val last: String) : Serializable
+           val last: String) : Parcelable
 
+@Parcelize
 class Location(val city: String,
-               val state: String) : Serializable
+               val state: String) : Parcelable
 
-class Login(val username: String) : Serializable
+@Parcelize
+class Login(val username: String) : Parcelable
 
-class DateAndAge(val date: String) : Serializable
+@Parcelize
+class DateAndAge(val date: String) : Parcelable
 
+@Parcelize
 class Id(val name: String,
-         val value: String) : Serializable
+         val value: String) : Parcelable
 
+@Parcelize
 class Picture(val large: String,
-              val medium: String) : Serializable
+              val medium: String) : Parcelable
 
 class Metadata(val version: String)

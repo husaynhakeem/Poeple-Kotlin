@@ -18,7 +18,7 @@ class DetailActivity : AppCompatActivity() {
 
         val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
 
-        val person = intent.getSerializableExtra("person") as Person
+        val person = intent.getParcelableExtra("person") as Person
         val factory = DetailViewModelFactory(person)
         binding.detailViewModel = ViewModelProviders.of(this, factory).get(DetailViewModel::class.java)
     }

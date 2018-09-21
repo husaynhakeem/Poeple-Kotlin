@@ -26,7 +26,7 @@ class ListingActivity : AppCompatActivity() {
 
         binding.rvPeople.layoutManager = GridLayoutManager(this, resources.getInteger(R.integer.people_list_span))
         binding.rvPeople.setHasFixedSize(true)
-        val personAdapter = ListingAdapter(ArrayList<Person>())
+        val personAdapter = ListingAdapter(ArrayList())
         binding.rvPeople.adapter = personAdapter
 
         viewModel.people.observe(this, Observer<List<Person>> {
@@ -40,7 +40,7 @@ class ListingActivity : AppCompatActivity() {
         viewModel.start()
     }
 
-    fun onLoadingDataError() {
+    private fun onLoadingDataError() {
         bar = Snackbar.make(rootView(), getString(R.string.error_loading_people), Snackbar.LENGTH_INDEFINITE);
         bar.setAction(getString(R.string.retry), { view -> viewModel.start() })
         bar.show();
