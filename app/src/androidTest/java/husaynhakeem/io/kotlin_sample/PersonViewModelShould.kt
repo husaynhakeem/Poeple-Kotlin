@@ -12,9 +12,9 @@ import org.junit.Test
  */
 class PersonViewModelShould {
 
-    val context = InstrumentationRegistry.getTargetContext()
-    val person = ANY_PERSON()
-    lateinit var personViewModel: PersonViewModel
+    private val context = InstrumentationRegistry.getTargetContext()
+    private val person = ANY_PERSON()
+    private lateinit var personViewModel: PersonViewModel
 
     @Before
     fun setUp() {

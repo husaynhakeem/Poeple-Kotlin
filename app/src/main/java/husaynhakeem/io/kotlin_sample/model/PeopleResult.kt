@@ -28,8 +28,7 @@ class Location(val city: String,
 
 class Login(val username: String) : Serializable
 
-class DateAndAge(val date: String,
-                 val age: Int) : Serializable
+class DateAndAge(val date: String) : Serializable
 
 class Id(val name: String,
          val value: String) : Serializable

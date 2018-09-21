@@ -10,8 +10,8 @@ import org.junit.Test
  */
 class DetailViewModelShould {
 
-    val person = FakeData.ANY_PERSON()
-    lateinit var detailViewModel: DetailViewModel
+    private val person = FakeData.ANY_PERSON()
+    private lateinit var detailViewModel: DetailViewModel
 
     @Before
     fun setUp() {
