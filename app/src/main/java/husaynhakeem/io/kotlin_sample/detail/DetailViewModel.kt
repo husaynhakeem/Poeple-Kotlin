@@ -19,7 +19,7 @@ class DetailViewModel(var person: Person) : ViewModel() {
 
     fun getGender() = person.gender
 
-    fun getBirthday() = formattedBirthday(person.dob)
+    fun getBirthday() = formattedBirthday(person.dob.date)
 
     fun getLocation() = formattedLocation(person.location.city, person.location.state)
 

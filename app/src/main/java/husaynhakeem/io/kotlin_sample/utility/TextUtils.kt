@@ -26,11 +26,11 @@ class TextUtils {
         var SEPARATOR = ", "
         fun formattedLocation(city: String, state: String) = city + SEPARATOR + state
 
-        fun formattedBirthday(birthday: String) : String {
-            val dateTimeFormat = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")
+        fun formattedBirthday(birthday: String): String {
+            val dateTimeFormat = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'") // 1982-08-05T12:58:51Z
             val dateTime = DateTime.parse(birthday, dateTimeFormat)
             return dateTime.dayOfMonth().asString + SEPARATOR +
-                    dateTime.monthOfYear().getAsText() + SPACE +
+                    dateTime.monthOfYear().asText + SPACE +
                     dateTime.year
         }
     }
