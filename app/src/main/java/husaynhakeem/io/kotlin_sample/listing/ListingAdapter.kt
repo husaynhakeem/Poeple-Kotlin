@@ -15,14 +15,14 @@ import husaynhakeem.io.kotlin_sample.model.Person
 
 class ListingAdapter(var people: List<Person>) : RecyclerView.Adapter<PersonViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) : PersonViewHolder {
-        val layoutInflater = LayoutInflater.from(parent?.context)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
         val itemPersonBinding = DataBindingUtil.inflate<ItemPersonBinding>(layoutInflater, R.layout.item_person, parent, false)
         return PersonViewHolder(itemPersonBinding)
     }
 
-    override fun onBindViewHolder(holder: PersonViewHolder?, position: Int) {
-        holder?.bind(people.get(position))
+    override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
+        holder.bind(people.get(position))
     }
 
     override fun getItemCount(): Int = people.size
